@@ -106,9 +106,9 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Volcando datos para la tabla db_grafitacna.auth_user: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla db_grafitacna.auth_user: ~0 rows (aproximadamente)
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-	(1, 'pbkdf2_sha256$600000$IDsQS03AxxanoSaEXfU6Jo$zxzsPWewV6Tf/kMdN6SPGgA+qciRHe2UOjk5Nl0F9Fs=', '2024-10-05 06:24:51.000000', 1, 'admin', 'Jhan', 'Apaza', 'jcapazape2020@gmail.com', 1, 1, '2024-10-05 06:23:48.000000');
+	(1, 'pbkdf2_sha256$600000$IDsQS03AxxanoSaEXfU6Jo$zxzsPWewV6Tf/kMdN6SPGgA+qciRHe2UOjk5Nl0F9Fs=', '2024-10-05 20:30:14.699827', 1, 'admin', 'Jhan', 'Apaza', 'jcapazape2020@gmail.com', 1, 1, '2024-10-05 06:23:48.000000');
 
 -- Volcando estructura para tabla db_grafitacna.auth_user_groups
 CREATE TABLE IF NOT EXISTS `auth_user_groups` (
@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `django_admin_log` (
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`),
   CONSTRAINT `django_admin_log_chk_1` CHECK ((`action_flag` >= 0))
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Volcando datos para la tabla db_grafitacna.django_admin_log: ~0 rows (aproximadamente)
 INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`, `action_flag`, `change_message`, `content_type_id`, `user_id`) VALUES
@@ -162,7 +162,11 @@ INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`,
 	(2, '2024-10-05 06:25:48.403705', '2', 'Impresoras', 1, '[{"added": {}}]', 1, 1),
 	(3, '2024-10-05 06:33:10.104603', '1', 'admin', 2, '[{"changed": {"fields": ["First name", "Last name", "Email address"]}}]', 6, 1),
 	(4, '2024-10-05 06:36:17.702587', '1', 'Impresora Epson L1250, USB,WiFi, 1Y (C11CJ71301)', 1, '[{"added": {}}]', 2, 1),
-	(5, '2024-10-05 06:37:44.079383', '2', 'Laptop HP 15-fd0006la, Intel Core i7-1355U, 12GB, SSD 512GB, FHD 15.6", FreeDOS, 1Y (802N8LA)', 1, '[{"added": {}}]', 2, 1);
+	(5, '2024-10-05 06:37:44.079383', '2', 'Laptop HP 15-fd0006la, Intel Core i7-1355U, 12GB, SSD 512GB, FHD 15.6", FreeDOS, 1Y (802N8LA)', 1, '[{"added": {}}]', 2, 1),
+	(6, '2024-10-05 21:20:35.328738', '3', 'Laptop Dell Inspiron 3520, Intel Core i5-1235U, 8GB DDR4, SSD 512GB, 15.6" FHD, Ubuntu, 1Y (HKG75)', 1, '[{"added": {}}]', 2, 1),
+	(7, '2024-10-05 21:22:29.916307', '4', 'Impresora Mult. HP Smart Tank 585, USB, WiFi, Bluetooth, 1Y (1F3Y4A)', 1, '[{"added": {}}]', 2, 1),
+	(8, '2024-10-05 21:25:14.634111', '5', 'Impresora Mult. Epson L5590, USB, WiFi, LAN, ADF', 1, '[{"added": {}}]', 2, 1),
+	(9, '2024-10-05 21:30:52.716898', '6', 'laptop sin imagen', 1, '[{"added": {}}]', 2, 1);
 
 -- Volcando estructura para tabla db_grafitacna.django_content_type
 CREATE TABLE IF NOT EXISTS `django_content_type` (
@@ -226,6 +230,8 @@ CREATE TABLE IF NOT EXISTS `django_session` (
 
 -- Volcando datos para la tabla db_grafitacna.django_session: ~0 rows (aproximadamente)
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+	('ciwtss8eu1fdi7hnb876ljn3517p7p9j', '.eJxVjDsOwyAQRO9CHSGx_FOmzxnQwkJwEoFk7MrK3WNLLpJuNO_NbCzgutSwjjyHidiVCXb57SKmV24HoCe2R-ept2WeIj8UftLB753y-3a6fwcVR93X0hQjtfBAyeeEIKIU6ECWFI2wpJz1qKROsGfAXNBEC6YUckoBFM0-X9xqN9U:1sxBPq:6pBs3OMRolm4NH6Vc_1TlEkLaUYmu_WLntoS10K5XXQ', '2024-10-19 20:30:14.701868'),
+	('e4l6soyk5ud6h1ypp3uivithpv50sjkq', '.eJxVjDsOwyAQRO9CHSGx_FOmzxnQwkJwEoFk7MrK3WNLLpJuNO_NbCzgutSwjjyHidiVCXb57SKmV24HoCe2R-ept2WeIj8UftLB753y-3a6fwcVR93X0hQjtfBAyeeEIKIU6ECWFI2wpJz1qKROsGfAXNBEC6YUckoBFM0-X9xqN9U:1sx7A5:rCUHm90ekp8FIu9F5FTu8bzHKZAIb0qvuCu0zEtQWTA', '2024-10-19 15:57:41.400630'),
 	('g8ff2tc9fpw09rkeqc2kbqs1l7vg7k3x', '.eJxVjDsOwyAQRO9CHSGx_FOmzxnQwkJwEoFk7MrK3WNLLpJuNO_NbCzgutSwjjyHidiVCXb57SKmV24HoCe2R-ept2WeIj8UftLB753y-3a6fwcVR93X0hQjtfBAyeeEIKIU6ECWFI2wpJz1qKROsGfAXNBEC6YUckoBFM0-X9xqN9U:1swyDj:2wAOQJFj-2F3_eC_NDPpe8peCvqL_TWpM_cPph5nY-Y', '2024-10-19 06:24:51.331595');
 
 -- Volcando estructura para tabla db_grafitacna.web_categoria
@@ -236,7 +242,7 @@ CREATE TABLE IF NOT EXISTS `web_categoria` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Volcando datos para la tabla db_grafitacna.web_categoria: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla db_grafitacna.web_categoria: ~0 rows (aproximadamente)
 INSERT INTO `web_categoria` (`id`, `nombre`, `fecha_registro`) VALUES
 	(1, 'Laptops', '2024-10-05 06:25:03.260380'),
 	(2, 'Impresoras', '2024-10-05 06:25:48.402678');
@@ -253,12 +259,16 @@ CREATE TABLE IF NOT EXISTS `web_producto` (
   PRIMARY KEY (`id`),
   KEY `web_producto_categoria_id_d7291d19_fk_web_categoria_id` (`categoria_id`),
   CONSTRAINT `web_producto_categoria_id_d7291d19_fk_web_categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `web_categoria` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Volcando datos para la tabla db_grafitacna.web_producto: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla db_grafitacna.web_producto: ~6 rows (aproximadamente)
 INSERT INTO `web_producto` (`id`, `nombre`, `descripcion`, `precio`, `fecha_registro`, `imagen`, `categoria_id`) VALUES
 	(1, 'Impresora Epson L1250, USB,WiFi, 1Y (C11CJ71301)', 'Impresora inalámbrica económica para familias y estudiantes. Ofrece costos de impresión ultrabajos gracias al sistema EcoTank de Epson que imprime 4.500 páginas a blanco y negro ó 7.500 páginas a color 2  por cada juego de botellas de repuesto. Diseñada para integrarse en su estilo de vida, está totalmente conectada con Wi-Fi, Wi-Fi Direct, y ofrece funciones de impresión móvil y copia/escaneo con cámara a través de la nueva aplicación Epson Smart Panel, además de ser compatible con la operación por voz a través de Alexa', 629.00, '2024-10-05 06:36:17.696621', 'productos/ImpresoraEpsonL1250_USB_WiFi_1Y.2_1370x.webp', 2),
-	(2, 'Laptop HP 15-fd0006la, Intel Core i7-1355U, 12GB, SSD 512GB, FHD 15.6", FreeDOS, 1Y (802N8LA)', 'Este modelo destaca por su diseño estilizado y moderno, con acabados elegantes y un peso relativamente ligero, lo que facilita su transporte. Su pantalla de 15,6 pulgadas Full HD', 2800.00, '2024-10-05 06:37:44.076391', 'productos/fd0006la-v2.webp', 1);
+	(2, 'Laptop HP 15-fd0006la, Intel Core i7-1355U, 12GB, SSD 512GB, FHD 15.6", FreeDOS, 1Y (802N8LA)', 'Este modelo destaca por su diseño estilizado y moderno, con acabados elegantes y un peso relativamente ligero, lo que facilita su transporte. Su pantalla de 15,6 pulgadas Full HD', 2800.00, '2024-10-05 06:37:44.076391', 'productos/fd0006la-v2.webp', 1),
+	(3, 'Laptop Dell Inspiron 3520, Intel Core i5-1235U, 8GB DDR4, SSD 512GB, 15.6" FHD, Ubuntu, 1Y (HKG75)', 'Experimente un rendimiento silencioso y receptivo, con procesadores Intel® Core™ de 12° generación combinados con opciones de SSD PCIe. ¿Quieres acelerar los gráficos? Hay gráficos discretos NVIDIA® opcionales disponibles.', 1800.00, '2024-10-05 21:20:35.328015', 'productos/laptop-dell-inspiron-15-3520-intel-core-i5-jxxyt-0_50e82a84-c02e-4f51-96d1-cb_39q9VOn.webp', 1),
+	(4, 'Impresora Mult. HP Smart Tank 585, USB, WiFi, Bluetooth, 1Y (1F3Y4A)', 'Al probar el HP Smart Tank 585, nos encontramos con una solución integral para imprimir sin complicaciones. Este dispositivo ofrece un rendimiento confiable y eficiente que se adapta a las necesidades de impresión en el hogar u oficina. ¡Descubre cómo este equipo puede simplificar tu día a día!', 650.00, '2024-10-05 21:22:29.911634', 'productos/ImpresoraMult.HPSmartTank585_USB_WiFi_Bluetooth_1Y_1F3Y4A_-4.webp', 2),
+	(5, 'Impresora Mult. Epson L5590, USB, WiFi, LAN, ADF', 'Esta es la impresora multifunción perfecta  (imprimir-escanear-copiar-fax) con Wi-Fi Direct, Ethernet y una pantalla LCD para cualquiera que busque impresiones de alta calidad a un costo por página increíblemente bajo.', 1130.00, '2024-10-05 21:25:14.632114', 'productos/epson-l5590-1.webp', 2),
+	(6, 'laptop sin imagen', 'aeeae', 120.00, '2024-10-05 21:30:52.715900', '', 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
