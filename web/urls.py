@@ -13,9 +13,18 @@ urlpatterns = [
     path('agregarCarrito/<int:producto_id>',views.agregarCarrito,name='agregarCarrito'),
     path('eliminarProductoCarrito/<int:producto_id>',views.eliminarProductoCarrito,name='eliminarProductoCarrito'),
     path('limpiarCarrito',views.limpiarCarrito,name='limpiarCarrito'),
+    path('crearUsuario', views.crearUsuario, name = 'crearUsuario'),
+    path('cuenta', views.cuentaUsuario, name = 'cuentaUsuario'),
+    path('actualizarCliente', views.actualizarCliente, name = 'actualizarCliente'),
+    path('login', views.loginUsuario, name = 'loginUsuario'),
+    path('logout',views.logoutUsuario,name='logoutUsuario'),   
+    path('registrarPedido',views.registrarPedido,name='registrarPedido'),
+    
+    
+    
     
     #AGREGADO DE MI SLC
-    
+
     #path('agregarProducto/<int:producto_id>/', views.agregarProductoCarrito, name='agregarProductoCarrito'),
     #path('quitarProducto/<int:producto_id>/', views.quitarProductoCarrito, name='quitarProductoCarrito'),
 
